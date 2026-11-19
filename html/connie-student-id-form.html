@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connie sons Student ID Form</title>
+</head>
+<body>
+<p>Practice form only: it checks the format, not whether an ID exists. No verification service is connected. Do not enter real student IDs.</p>
+<!-- This form defaults to GET; submitted values can appear in the URL. -->
+<form>
+  <label for="cs-code">Connie sons Student ID (e.g., CS-2026):</label>
+  <input 
+    type="text" 
+    id="cs-code" 
+    name="cs_code" 
+    pattern="CS-[0-9]{4}" 
+    title="Format must be CS- followed by 4 digits (e.g., CS-2026)" 
+    required
+  >
+  <button type="submit">Verify Student ID</button>
+</form>
+</body>
+</html>
