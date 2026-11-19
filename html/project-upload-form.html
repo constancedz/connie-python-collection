@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coding Project Upload Form</title>
+</head>
+<body>
+<!-- Practice form only: no upload service is connected. The form defaults to GET, so it does not upload a file. -->
+<form enctype="multipart/form-data">
+  <label for="project-file">Upload Your Coding Project (.html, .py, or .zip):</label>
+  <input 
+    type="file" 
+    id="project-file" 
+    name="project_file" 
+    accept=".html,.py,.zip" 
+    required
+  >
+  <button type="submit">Submit Assignment</button>
+</form>
+</body>
+</html>
