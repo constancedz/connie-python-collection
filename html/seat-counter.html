@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seat Counter Example</title>
+  <style>
+    .badge { font-family: sans-serif; padding: 8px 12px; border: 1px solid #ccc; display: inline-block; }
+  </style>
+</head>
+<body>
+<p>Practice example only: this is not a live enrolment count. The count resets when the page reloads.</p>
+<div class="badge">Seats Taken: <span id="seatCount" aria-live="polite">0</span> / 30</div>
+<button onclick="addSeat()">+1 Learner</button>
+<button onclick="resetSeats()">Reset</button>
+<script>
+  let seats = 0;
+  function renderSeats() { document.getElementById("seatCount").textContent = seats; }
+  function addSeat() { if (seats < 30) { seats++; renderSeats(); } }
+  function resetSeats() { seats = 0; renderSeats(); }
+</script>
+</body>
+</html>
