@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Program Card Filter</title>
+  <style>
+    .card { display: none; padding: 8px; margin: 4px 0; border: 1px solid #ddd; }
+    .card.show { display: block; }
+  </style>
+</head>
+<body>
+<button onclick="filterCards('all')">All</button>
+<button onclick="filterCards('code')">Coding</button>
+<button onclick="filterCards('robotics')">Robotics</button>
+<div class="card show" data-cat="code">Python &amp; Web Basics</div>
+<div class="card show" data-cat="robotics">Gogobot &amp; EV3 Robotics</div>
+<script>
+  function filterCards(cat) {
+    document.querySelectorAll(".card").forEach(el => {
+      el.classList.toggle("show", cat === "all" || el.dataset.cat === cat);
+    });
+  }
+</script>
+</body>
+</html>
