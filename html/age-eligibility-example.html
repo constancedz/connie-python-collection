@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Age Eligibility Coding Example</title>
+</head>
+<body>
+<p>This is a coding exercise. The age range is an example, not verified eligibility criteria. Do not use it to make enrolment decisions.</p>
+<label for="ageInput">Age</label>
+<input id="ageInput" type="number" min="1" max="100" placeholder="Enter age">
+<button onclick="checkAge()">Check Eligibility</button>
+<p id="ageResult" aria-live="polite"></p>
+<script>
+  function checkAge() {
+    const age = Number(document.getElementById("ageInput").value);
+    const out = document.getElementById("ageResult");
+    if (!age || age < 1) {
+      out.textContent = "Enter a valid age above 0.";
+      return;
+    }
+    out.textContent = age >= 8 && age <= 35
+      ? "Eligible for youth & women coding tracks."
+      : "Outside standard 8–35 range; check adult/special sessions.";
+  }
+</script>
+</body>
+</html>
