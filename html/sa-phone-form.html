@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>South African Mobile Number Form</title>
+</head>
+<body>
+<!-- Practice form only: no contact-saving service is connected. Avoid entering real phone numbers. -->
+<form>
+  <label for="sa-phone">South African Mobile Number:</label>
+  <input 
+    type="tel" 
+    id="sa-phone" 
+    name="sa_phone" 
+    pattern="0[0-9]{9}" 
+    placeholder="0XXXXXXXXX" 
+    title="Enter a 10-digit South African phone number starting with 0" 
+    required
+  >
+  <button type="submit">Save Contact</button>
+</form>
+</body>
+</html>
